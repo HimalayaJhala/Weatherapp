@@ -1,83 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Weather app</title>
-    <link rel = "stylesheet" href = "style.css"/>
+    <link rel="stylesheet" href="style.css" />
 
 </head>
 
-    
+
 <body>
     <div class="card">
         <div class="search">
-            <input type = "text" placeholder="enter city name" spellcheck="false">
-            <button> <img src= "images/search.png" alt="search"> </button>
+            <input type="text" placeholder="enter city name" spellcheck="false">
+            <button> <img src="images/search.png" alt="search"> </button>
             </button>
         </div>
-    
-<div class="weather">
-    <img src ="images/rain.png" class="weather-icon">
-    <h1 class = "temp"> 00°C </h1>
-    <h2 class ="city"> City </h2>
 
-    <div class="details">
-            <div class = "col">
-            <img src="images/humidity.png"  >
-                <div>
-                <p class = "humidity"> 00%</p>
-                <p>Humidity</p>
+        <div class="weather">
+            <img src="images/rain.png" class="weather-icon">
+            <h1 class="temp"> 00°C </h1>
+            <h2 class="city"> City </h2>
+
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png">
+                    <div>
+                        <p class="humidity"> 00%</p>
+                        <p>Humidity</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class = "col">
-            <img src="images/wind.png" > 
-                <div>
-                <p class = "wind">  0.00 km/h</p>
-                <p>windspeed</p>
+                <div class="col">
+                    <img src="images/wind.png">
+                    <div>
+                        <p class="wind"> 0.00 km/h</p>
+                        <p>windspeed</p>
+                    </div>
                 </div>
-            </div>
 
             </div>
+        </div>
 </div>
+        <!-- 863242cfb2b1d357e6093d9a4df19a4b -->
 
-<!-- 863242cfb2b1d357e6093d9a4df19a4b -->
+        <script>
+            const apiKey = "149f10079054da2cd91eb2913e8f66db";
+            const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
-<script>
-    const apiKey = "149f10079054da2cd91eb2913e8f66db";
-    const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
+            const searchBox = document.querySelector(".search input");
+            const searchBtn = document.querySelector(".search button");
+            const city = "Bangalore";
+            checkWeather(city);
+            async function checkWeather(city) {
+                // const response = await fetch(apiUrl+city+`&appid=${apiKey}`)
+                // const response = await fetch(apiUrl + `?q=${city}&appid=${apiKey}`);
+                const response = await fetch(apiUrl + `?q=${city}&appid=${apiKey}&units=metric`);
 
-    const searchBox = document.querySelector(".search input");
-    const searchBtn = document.querySelector(".search button");
-    const city = "Bangalore";
-    checkWeather(city);
-    async function checkWeather(city){
-        // const response = await fetch(apiUrl+city+`&appid=${apiKey}`)
-        // const response = await fetch(apiUrl + `?q=${city}&appid=${apiKey}`);
-         const response = await fetch(apiUrl+`?q=${city}&appid=${apiKey}&units=metric`);
+                var data = await response.json();
 
-        var data = await response.json() ;
-        
-        // console.log(data);
-        document.querySelector(".city").innerHTML = data.name;
-        document.querySelector(".temp").innerHTML = Math.round(data.main.temp)+"°C";
-        document.querySelector(".humidity").innerHTML = data.main.humidity +"%";
-        document.querySelector(".wind").innerHTML = data.wind.speed +" km/h";
-    }
+                // console.log(data);
+                document.querySelector(".city").innerHTML = data.name;
+                document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
+                document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+                document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
+            }
 
-    searchBtn.addEventListener("click" , ()=>{
-        checkWeather(searchBox.value);
-    })
+            searchBtn.addEventListener("click", () => {
+                checkWeather(searchBox.value);
+            })
 
-    
-</script>
+
+        </script>
 
 
 
 
 
 </body>
+
 </html>
