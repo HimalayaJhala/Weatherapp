@@ -21,14 +21,14 @@
     
 <div class="weather">
     <img src ="images/rain.png" class="weather-icon">
-    <h1 class = "temp"> 20°C </h1>
-    <h2 class ="city"> New York </h2>
+    <h1 class = "temp"> 00°C </h1>
+    <h2 class ="city"> City </h2>
 
     <div class="details">
             <div class = "col">
             <img src="images/humidity.png"  >
                 <div>
-                <p class = "humidity"> 50%</p>
+                <p class = "humidity"> 00%</p>
                 <p>Humidity</p>
                 </div>
             </div>
@@ -36,15 +36,12 @@
             <div class = "col">
             <img src="images/wind.png" > 
                 <div>
-                <p class = "wind"> 15 kmph</p>
+                <p class = "wind">  0.00 km/h</p>
                 <p>windspeed</p>
                 </div>
             </div>
 
             </div>
-            
-
-          
 </div>
 
 <!-- 863242cfb2b1d357e6093d9a4df19a4b -->
@@ -55,7 +52,8 @@
 
     const searchBox = document.querySelector(".search input");
     const searchBtn = document.querySelector(".search button");
-
+    const city = "Bangalore";
+    checkWeather(city);
     async function checkWeather(city){
         // const response = await fetch(apiUrl+city+`&appid=${apiKey}`)
         // const response = await fetch(apiUrl + `?q=${city}&appid=${apiKey}`);
@@ -67,7 +65,7 @@
         document.querySelector(".city").innerHTML = data.name;
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp)+"°C";
         document.querySelector(".humidity").innerHTML = data.main.humidity +"%";
-        document.querySelector(".wind").innerHTML = data.wind.speed +"km/h";
+        document.querySelector(".wind").innerHTML = data.wind.speed +" km/h";
     }
 
     searchBtn.addEventListener("click" , ()=>{
