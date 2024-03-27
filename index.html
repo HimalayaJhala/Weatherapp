@@ -48,6 +48,7 @@
         <!-- 863242cfb2b1d357e6093d9a4df19a4b -->
 
         <script>
+            
             const apiKey = "149f10079054da2cd91eb2913e8f66db";
             const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
@@ -55,7 +56,7 @@
             const searchBtn = document.querySelector(".search button");
             const weatherIcon = document.querySelector(".weather-icon");
             const city = "Bangalore";
-            checkWeather(city);
+            // checkWeather(city);
 
             async function checkWeather(city) {
                 // const response = await fetch(apiUrl+city+`&appid=${apiKey}`)
@@ -83,6 +84,8 @@
                 }else if(data.weather[0].main == "Snow"){
                     weatherIcon.src = "images/snow.png"
                 }
+                document.querySelector(".card").classList.add("active");
+                document.querySelector(".weather").style.display = "block"; 
             }
 
             searchBtn.addEventListener("click", () => {
