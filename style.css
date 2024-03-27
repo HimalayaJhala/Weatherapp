@@ -18,7 +18,7 @@ body{
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 
@@ -70,14 +70,14 @@ width: 16px;
 .weather h1 {
     font-size: 80px;
     font-weight: 500;
-    transition: all 0.5s  ease;
+    /* transition: all 0.5s  ease; */
 }
 
 .weather h2 {
 font-size: 45px;
 font-weight: 400;
 /* margin-top : -0px; */
-transition: all 0.5s ease;
+/* transition: all 0.5s ease; */
 }
 
 .details{
@@ -92,7 +92,7 @@ transition: all 0.5s ease;
     display: flex;
     align-items: center;
     text-align: left;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .col img{
