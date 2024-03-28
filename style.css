@@ -70,7 +70,14 @@ body {
     margin-top: 5px;
     width: 16px;
 }
-
+.search button:focus {
+    outline: none !important;
+}
+@media (hover: none) {
+    .search button:focus {
+        outline: none;
+    }
+}
 
 .weather-icon {
     width: 150px;
