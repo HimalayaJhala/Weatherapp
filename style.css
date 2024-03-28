@@ -55,7 +55,7 @@ body {
 
 .weather.show {
     opacity: 1; /* When .show class is added, set opacity to 1 */
-    height: 470px; 
+    height: 495px; 
     transition:  height 0.85s ease;
 }
 
