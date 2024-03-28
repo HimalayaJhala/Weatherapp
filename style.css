@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 5px;
     font-family: system-ui;
     box-sizing: border-box;
     color: rgb(255, 255, 255);
@@ -15,8 +15,12 @@ body {
     /* background: linear-gradient(135deg, #b762e9, #e76ae5, #f47070, rgb(240, 181, 244)); */
     /* color: #fff; */
     margin: 100px auto 0;
-    border-radius: 50px;
-    padding: 40px 25px;
+    border-radius: 70px;
+    /* padding: 25px 20px; */
+    padding-top: 28px;
+    padding-bottom: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
 }
 
@@ -24,13 +28,14 @@ body {
 .search {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .search input {
     height: 60px;
     border: 0;
     outline: 0;
+    /* outline: 0.5px solid rgb(255, 255, 255); */
     background-color: rgb(245,245,247);
     color: #555;
     padding: 10px 25px;
@@ -49,13 +54,14 @@ body {
 
 .weather.show {
     opacity: 1; /* When .show class is added, set opacity to 1 */
-    height:440px; 
+    height: 470px; 
     transition:  height 0.85s ease;
 }
 
 
 .search button {
     outline: none;
+    /* outline: 0.5px solid rgb(255, 255, 255); */
     border: 0;
     /* outline: 0; */
     background: rgb(245,245,247);
@@ -70,9 +76,9 @@ body {
     margin-top: 5px;
     width: 16px;
 }
-.search button:focus {
+/* .search button:focus {
     outline: none !important;
-}
+} */
 @media (hover: none) {
     .search button:focus {
         outline: none;
