@@ -11,7 +11,7 @@ body {
 
 .card {
     max-width: 450px;
-    background:  #dfe5e3d6;
+    background:  #e5e5e5d6;
     /* background: linear-gradient(135deg, #b762e9, #e76ae5, #f47070, rgb(240, 181, 244)); */
     /* color: #fff; */
     margin: 100px auto 0;
@@ -31,7 +31,7 @@ body {
     height: 60px;
     border: 0;
     outline: 0;
-    background-color: #ffffff;
+    background-color: rgb(245,245,247);
     color: #555;
     padding: 10px 25px;
     border-radius: 30px;
@@ -55,9 +55,10 @@ body {
 
 
 .search button {
+    outline: none;
     border: 0;
-    outline: 0;
-    background: #ffffff;
+    /* outline: 0; */
+    background: rgb(245,245,247);
     border-radius: 30px;
     width: 80px;
     height: 60px;
