@@ -15,7 +15,7 @@
 <body>
     <div class="card">
         <div class="search">
-            <input type="text" placeholder="enter city name" spellcheck="false">
+            <input type="text" placeholder="enter city name" spellcheck="false" autofocus>
             <button> <img src="images/search.png" alt="search"> </button>
             </button>
         </div>
@@ -55,13 +55,11 @@
             const searchBox = document.querySelector(".search input");
             const searchBtn = document.querySelector(".search button");
             const weatherIcon = document.querySelector(".weather-icon");
-            const city = "Bangalore";
-            // checkWeather(city);
+       
 
             async function checkWeather(city) {
 
-                // const response = await fetch(apiUrl+city+`&appid=${apiKey}`)
-                // const response = await fetch(apiUrl + `?q=${city}&appid=${apiKey}`);
+               
                 const response = await fetch(apiUrl + `?q=${city}&appid=${apiKey}&units=metric`);
 
                 var data = await response.json();
@@ -88,17 +86,37 @@
 
                 document.querySelector(".weather").classList.add("show");
 
+           
             }
 
-            searchBtn.addEventListener("click", () => {
+            searchBtn.addEventListener("click", (event) => {
+                if(event){
+                    document.querySelector(".weather").classList.remove("reshow");
+                    document.querySelector(".weather").classList.add("show");
                 checkWeather(searchBox.value);
-            })
+                }
+            });
+            searchBox.addEventListener("keypress", (event) => {
+                if(event.key === "Enter"){
+                    document.querySelector(".weather").classList.remove("reshow");
+                    document.querySelector(".weather").classList.add("show");
+                checkWeather(searchBox.value);
+                }
+            });
 
 
+            let prevLength = searchBox.value.length;
+            searchBox.addEventListener("input", () => {
+                if (searchBox.value.length < prevLength) {
+                document.querySelector(".weather").classList.add("reshow");
+                }
+                prevLength = searchBox.value.length;
+               
+            });
+
+           
+      
         </script>
-
-
-
 
 
 </body>
