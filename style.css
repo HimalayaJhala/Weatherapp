@@ -52,11 +52,14 @@ body {
   opacity: 0;
 }
 
+.weather img{
+     transition : opacity 1s ease-in;
+}
 .weather.show
  {
   opacity: 1; /* When .show class is added, set opacity to 1 */
   height: 495px;
-  transition: height 0.85s, opacity 2s ease;
+  transition: height 2s, opacity 3s ease-in;
 }
 
 .card.red{
@@ -68,7 +71,7 @@ body {
 .weather-icon {
     width: 150px;
     margin-top: 30px;
-    transition: margin 1.5s ease;
+    transition: margin 1.5s,opacity 1s ease;
   }
 .weather-icon.w {
     width: 150px;
