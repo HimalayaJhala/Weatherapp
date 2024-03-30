@@ -59,7 +59,7 @@ body {
  {
   opacity: 1; /* When .show class is added, set opacity to 1 */
   height: 495px;
-  transition: height 2s, opacity 2.5s ease;
+  transition: height 2s, opacity 3.5s ease;
 }
 
 .card.red{
