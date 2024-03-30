@@ -22,6 +22,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
+  transition: all 2s ease-in;
 }
 
 .search {
@@ -82,7 +83,7 @@ body {
     width: 150px;
     margin-top: 50px;
     margin-bottom: 40px;
-    transition: margin 1s ,opacity 1s ease;
+    transition: margin 2s ,opacity 1s ease;
   }
 
 .weather.reshow {
