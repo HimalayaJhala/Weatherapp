@@ -85,6 +85,8 @@
                     weatherIcon.src = "images/Mist.png"
                 }else if(data.weather[0].main == "Snow"){
                     weatherIcon.src = "images/snow.png"
+                }else if(data.weather[0].main == "Haze"){
+                    weatherIcon.src = "images/haze.png"
                 }
                 const cityc = document.querySelector(".city");
                 document.querySelector(".weather").classList.add("show");   

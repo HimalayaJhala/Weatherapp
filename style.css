@@ -67,6 +67,7 @@ body {
 .weather-icon {
     width: 150px;
     margin-top: 10px;
+    transition: opacity 2s ease;
   }
 
   .weather-icon.red {
