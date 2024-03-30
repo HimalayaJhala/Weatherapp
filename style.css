@@ -52,7 +52,8 @@ body {
   opacity: 0;
 }
 
-.weather.show {
+.weather.show
+ {
   opacity: 1; /* When .show class is added, set opacity to 1 */
   height: 495px;
   transition: height 0.85s, opacity 2s ease;
@@ -60,21 +61,25 @@ body {
 
 .card.red{
     /* outline: 3px dashed rgba(255, 70, 70, 0.899); */
-    transition: background-color 3s;
+    transition: background-color 1s , opacity 10s;
     background-color: #fec9d6;
 }
 
 .weather-icon {
     width: 150px;
-    margin-top: 10px;
-    transition: opacity 2s ease;
+    margin-top: 30px;
+    transition: margin 1.5s ease;
   }
-
-  .weather-icon.red {
+.weather-icon.w {
+    width: 150px;
+    margin-top: 20px;
+    transition: margin 1s ,opacity 1s ease;
+  }
+.weather-icon.red {
     width: 150px;
     margin-top: 50px;
     margin-bottom: 40px;
-    transition: opacity 2s ease;
+    transition: margin 1s ,opacity 1s ease;
   }
 
 .weather.reshow {

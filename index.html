@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,17 +10,15 @@
 
 </head>
 
-
 <body>
     <div class="card">
         <div class="search">
             <input type="text" placeholder="enter city name" spellcheck="false" autofocus>
-            <button> <img src="images/search.png" alt="search"> </button>
-            </button>
+            <button> <img src="images/search.png" alt="search"> </button> 
         </div>
 
         <div class="weather">
-            <img src="" class="weather-icon">
+            <img src="images/Daco.png" class="weather-icon">
             <h1 class="temp"> 0°C </h1>
             <h2 class="city"> City </h2>
 
@@ -104,20 +101,18 @@
                     document.querySelector(".weather").classList.add("show");
                 checkWeather(searchBox.value);
                 }
-               
             });
-
             let prevLength = searchBox.value.length;
             searchBox.addEventListener("input", () => {
                 if (searchBox.value.length < prevLength ||searchBox.value.length > prevLength) {
                 document.querySelector(".weather").classList.add("reshow");
                 document.querySelector(".card").classList.remove("red");
                 document.querySelector(".weather-icon").classList.remove("red");
+                document.querySelector(".weather-icon").classList.add("w");
                 }
                 prevLength = searchBox.value.length;
             });
         </script>
-
 </body>
 
 </html>
