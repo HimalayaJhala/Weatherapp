@@ -58,11 +58,29 @@ body {
   transition: height 0.85s, opacity 2s ease;
 }
 
+.card.red{
+    /* outline: 3px dashed rgba(255, 70, 70, 0.899); */
+    transition: background-color 3s;
+    background-color: #fec9d6;
+}
+
+.weather-icon {
+    width: 150px;
+    margin-top: 10px;
+  }
+
+  .weather-icon.red {
+    width: 150px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    transition: opacity 2s ease;
+  }
+
 .weather.reshow {
   opacity: 0; /* When .show class is added, set opacity to 1 */
   height: 0;
   overflow: hidden;
-  transition: height 0.85s, opacity 2s ease;
+  transition: height 0.6s, opacity 2s ease;
 }
 
 .search button {
@@ -91,10 +109,8 @@ body {
   }
 }
 
-.weather-icon {
-  width: 150px;
-  margin-top: 10px;
-}
+
+
 
 .weather h1 {
   font-size: 80px;
