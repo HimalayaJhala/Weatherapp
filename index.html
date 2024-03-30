@@ -105,7 +105,8 @@
             });
             let prevLength = searchBox.value.length;
             searchBox.addEventListener("input", () => {
-                if (searchBox.value.length < prevLength ||searchBox.value.length > prevLength) {
+                if (searchBox.value.length < prevLength || searchBox.value.length > prevLength) {
+                weatherIcon.src = "images/Daco.png";
                 document.querySelector(".weather").classList.add("reshow");
                 document.querySelector(".card").classList.remove("red");
                 document.querySelector(".weather-icon").classList.remove("red");

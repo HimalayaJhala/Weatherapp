@@ -57,7 +57,7 @@ body {
      transition : opacity 1s ease-in;
 }
 .weather.show
- {
+ { overflow: hidden;
   opacity: 1; /* When .show class is added, set opacity to 1 */
   height: 495px;
   transition: height 2s, opacity 3.5s ease;
@@ -90,7 +90,7 @@ body {
   opacity: 0; /* When .show class is added, set opacity to 1 */
   height: 0; 
   overflow: hidden;
-  transition: height 0.5s;
+  transition: height 0.5s, margin 2s;
 }
 
 .search button {
