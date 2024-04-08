@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Weather app</title>
     <link rel="stylesheet" href="style.css" />
-
 </head>
 
 <body>
@@ -18,7 +16,7 @@
         </div>
 
         <div class="weather">
-            <img src="images/Daco.png" class="weather-icon">
+            <img src="images/Daco.png" class="weather-icon" loading="eager">
             <h1 class="temp"> 0°C </h1>
             <h2 class="city"> City </h2>
 
@@ -43,11 +41,13 @@
         </div>
 </div>
         <!-- 863242cfb2b1d357e6093d9a4df19a4b -->
-
-        <script>
+        <!-- <script src="config.js" > </script> -->
+    <script>
+    //    import apiKeys from './config.js';
              const cityc = document.querySelector(".city");
-             
-            const apiKey = "149f10079054da2cd91eb2913e8f66db";
+              
+             const apiKey =  "149f10079054da2cd91eb2913e8f66db";
+            //  console.log("config.apiKeys" + apiKeys);
             const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
             const searchBox = document.querySelector(".search input");
@@ -57,8 +57,8 @@
         
             async function checkWeather(city) {
                
+                // const response = await fetch(apiUrl + `?q=${city}&appid=${apiKey}&units=metric`);
                 const response = await fetch(apiUrl + `?q=${city}&appid=${apiKey}&units=metric`);
-
                 if(response.status == 404){
                     document.querySelector(".card").classList.add("red");
                     document.querySelector(".weather-icon").classList.add("red");
