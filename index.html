@@ -40,25 +40,19 @@
             </div>
         </div>
 </div>
-        <!-- 863242cfb2b1d357e6093d9a4df19a4b -->
-        <!-- <script src="config.js" > </script> -->
+    
+    <script src="config.js" > </script>
     <script>
-    //    import apiKeys from './config.js';
              const cityc = document.querySelector(".city");
-              
-             const apiKey =  "149f10079054da2cd91eb2913e8f66db";
-            //  console.log("config.apiKeys" + apiKeys);
-            const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
+             const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
             const searchBox = document.querySelector(".search input");
             const searchBtn = document.querySelector(".search button");
             const weatherIcon = document.querySelector(".weather-icon");
-            // weatherIcon.style.transition = "opacity 5s"; 
-        
+
             async function checkWeather(city) {
                
-                // const response = await fetch(apiUrl + `?q=${city}&appid=${apiKey}&units=metric`);
-                const response = await fetch(apiUrl + `?q=${city}&appid=${apiKey}&units=metric`);
+                const response = await fetch(apiUrl + `?q=${city}&appid=${apiKeys}&units=metric`);
                 if(response.status == 404){
                     document.querySelector(".card").classList.add("red");
                     document.querySelector(".weather-icon").classList.add("red");
